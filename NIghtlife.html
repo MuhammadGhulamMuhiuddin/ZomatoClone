@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=`">
+    <title>Zomato.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Asserts/Zomato_logo.png" type="image/x-icon">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+/* Section Header */
+.Header{
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+}
+.NavLogo img{
+    display: flex;
+    max-width: 7%;
+    margin-top: 1.55rem;
+    margin-left: 25rem;
+}
+.NavInput{
+    /* border: 1px solid red; */
+    width: 40%;
+    margin-left: 34rem;
+    margin-top: -2rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.location-icon {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #ff6f61;
+}
+.search-icon{
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.location-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-icon {
+    margin-left: 8px;
+    color: #777;
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background-color: #ddd;
+    margin: 0 15px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+.NavButtons{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 12%;
+    margin-top: -1.55rem;
+    margin-left: 85rem;
+}
+.NavButtons span{
+    margin: 0 1rem;
+    color: grey;
+}
+.NavButtons span:hover{
+    cursor: pointer;
+}
+.NavList{
+    /* border: 1px solid green; */
+    display: flex;
+    width: 24%;
+    margin-top: 2rem;
+    margin-left: 25rem;
+}
+.NavList span{
+   
+    color: grey;
+   margin-right: 4rem;
+   font-size: small;
+}
+.NavList span:hover{
+    cursor: pointer;
+}
+.NavFrachise{
+    /* border: 1px solid blue; */
+    margin-top: 1rem;
+    display: flex;
+    margin-left: 25rem;
+    width: 50%;
+    gap: 3rem;
+}
+.NavFrachise1{
+    /* border: 2px solid saddlebrown; */
+    width: 25%;
+    display: flex;
+}
+.NavFranchiseImg1 img{
+    max-width: 30%;
+}
+.NavFranchiseImg1 img:hover{
+    cursor: pointer;
+}
+.NavFranchiseImg1 h5 a{
+    display: inline-block;
+    color: grey;
+    text-decoration: none;
+}
+.NavFranchiseImg1 h5 a:hover{
+    color: #F06371;
+    cursor: pointer;
+}
+
+
+/* SectionCollection */
+.Collections{
+    /* border: 2px solid black; */
+    height: auto;
+    width: 100%;
+    background-color: #f8f8f8;
+    overflow: hidden;
+
+}
+.Collection{
+    margin-left: 25rem;
+    padding-bottom: 2rem;
+}
+.ColcMainText {
+    margin-top: 2rem;
+} 
+.ColcMainText h2{
+    font-weight: 500;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+.ColcMainText h6{
+    line-height: 1.4;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+}
+.ColcMainText span{
+    line-height: 2;
+    font-weight: 500;
+    color: #F06371;
+}
+.cards{
+    height: 400px;
+}
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+.collections {
+    padding: 50px 0;
+}
+/* SectionTrending */
+.Trendings{
+    /* border: 1px solid red; */
+    height: auto;
+    width: 100%;
+}
+.Trending {
+    /* margin-left: 20rem; */
+}
+.filters {
+    margin-top: 20px;
+    margin-bottom: 4rem;
+}
+.fit-btn{
+    border: 1px solid lightslategray;
+    color: grey;
+}
+.Sale{
+    margin-left: 25rem;
+}
+.Saleimg img{
+    max-width: 90%;
+}
+.SaleMainText {
+    /* border: 1px solid green; */
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+.SaleMainText h5{
+    color: rgb(28, 28, 28);
+    font-size: 3rem;
+    /* margin: 1rem 0px 3.2rem; */
+    line-height: 1.2;
+    font-weight: 500;
+}
+.TrendingPics{
+    margin-left: 25rem;
+}
+ .card-img-top {
+            height: 250px;
+            /* width: 20%; */
+            object-fit: cover;
+        }
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #0066ff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .rating-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .distance {
+            font-size: 0.9em;
+            color: gray;
+        }
+        .card {
+            width: 80%;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .card:hover{
+            box-shadow: 0 0 11px rgba(33,33,33,.2); 
+        }
+        .card-body {
+            padding-top: 50px;
+        }
+
+        /*Dinig Footer Section  */
+
+        .DiningFooter{
+            /* border: 1px solid red; */
+            height: auto;
+            width: 100%;
+        }
+
+        .footer {
+            background-color: #F8F8F8;
+            padding: 40px 0;
+        }
+        .footer h6 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .footer a {
+            color: grey;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #666;
+        }
+        .LinkStore{
+            /* border: 1px solid black; */
+            display: inline-block;
+            /* width: 40%; */
+        }
+        .footer .social-links img {
+            width: 40px;
+            margin: 0 10px;
+        }
+        .footer .social-links a {
+            color: #000;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .FooterStore img{
+            max-width: 50%;
+            margin-bottom: 1rem;
+
+        }
+        .footer-bottom {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- SectionHeader -->
+    <Section class="Header">
+        <div class="Nav">
+            <div class="NavLogo">
+                <img src="./Asserts/NavLogo.avif" alt="Here is an NavLogo">
+            </div>
+            <div class="NavInput">
+                <div class="search-bar">
+                    <div class="location">
+                        <!-- <span class="location-icon">&#x1F4CD;</span> -->
+                         <span class="location-icon"><i class=" location-icon fa-solid fa-location-dot"></i></span>
+                        <input type="text" placeholder="Block B, Jaypee Greens, ..." class="location-input">
+                        <span class="dropdown-icon">&#x25BC;</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="search">
+                        <!-- <span class="search-icon">&#x1F50E;</span> -->
+                        <span class="search-icon"><i class="search-icon fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Search for restaurant, cuisine or a dish" class="search-input">
+                    </div>
+                </div>
+            </div>
+            <div class="NavButtons">
+                <Span>Login</Span>
+                <Span>Sign up</Span>
+            </div>
+            <div class="NavList">
+                <span>
+                    Home &#160; / &#160; India &#160; / &#160; Delhi NCR &#160; / &#160; Restaurants
+                </span>
+            </div>
+            <div class="NavFrachise">
+                <div class="NavFrachise1">
+                    <div class="NavFranchiseImg1">
+                        <img src="./Asserts/DiningOut.avif" alt="Here is an Franchise Image">
+                        <h5>
+                            <a href="./index.html">Dining</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="NavFrachise1">
+                    <div class="NavFranchiseImg1">
+                        <img src="./Asserts/Deliveryimg.webp" alt="Here is an Franchise Image">
+                        <h5>
+                            <a href="./Delivery.html">Delivery</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="NavFrachise1">
+                    <div class="NavFranchiseImg1">
+                        <img src="./Asserts/NightLife.webp" alt="Here is an Franchise Image">
+                        <h5>
+                            <a href="./NIghtlife.html">Nightlife</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+
+    <!-- SectionCollections -->
+    <Section class="Collections">
+        <div class="Collection">
+            <div class="ColcMainText">
+                <h2>Collections</h2>
+                <h6>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends <span>
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All
+                        Collections in Delhi NCR ></span></h6>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card cards">
+                        <img src="./Asserts/collectionimg1.avif" class="card-img-top" alt="Top Trending Spots">
+                        <div class="card-body">
+                            <h5 class="card-title">Top Trending Spots</h5>
+                            <p class="card-text">29 Places ></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="./Asserts/collectionimg2.avif" class="card-img-top" alt="Best Insta-worthy Places">
+                        <div class="card-body">
+                            <h5 class="card-title">Best Insta-worthy Places</h5>
+                            <p class="card-text">38 Places ></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="./Asserts/collectionimg3.avif" class="card-img-top" alt="Newly Opened Places">
+                        <div class="card-body">
+                            <h5 class="card-title">Newly Opened Places</h5>
+                            <p class="card-text">12 Places ></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="./Asserts/collectionimg4.avif" class="card-img-top" alt="Best Rooftop Places">
+                        <div class="card-body">
+                            <h5 class="card-title">Best Rooftop Places</h5>
+                            <p class="card-text">49 Places ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </Section>
+    <!-- SectionTrending  -->
+    <section class="Trendings">
+        <div class="Trending">
+            <div class="container filters text-center">
+                <button type="button" class="btn btn-light fit-btn">Filters</button>
+                <button type="button" class="btn btn-light fit-btn">Offers</button>
+                <button type="button" class="btn btn-light fit-btn">Rating: 4.0+</button>
+                <button type="button" class="btn btn-light fit-btn">Pet Friendly</button>
+                <button type="button" class="btn btn-light fit-btn">Outdoor Seating</button>
+                <button type="button" class="btn btn-light fit-btn">Serves Alcohol</button>
+                <button type="button" class="btn btn-light fit-btn">Open Now</button>
+            </div>
+            <div class="Sale">
+                <div class="Saleimg">
+                    <img src="./Asserts/saleimg.png" alt="Here is an Sale img">
+                </div>
+                <div class="SaleMainText">
+                    <h5>
+                        Nightlife: Night clubs,pubs and baar in
+                    </h5>
+                </div>
+            </div>
+
+            <div class="TrendingPics">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/ZerroMiles.avif" class="card-img-top" alt="Sagar Ratna">
+                                <div class="discount-badge">Flat 25% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sagar Ratna</h5>
+                                    <p class="card-text">Chinese, North Indian, South Indian</p>
+                                    <p class="card-text">₹1,100 for two</p>
+                                    <p class="card-text">Omega 2, Greater Noida</p>
+                                    <p class="card-text distance">956 m</p>
+                                    <span class="rating-badge">3.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card ">
+                                <img src="./Asserts/HongKong.avif" class="card-img-top"
+                                    alt="Berco's - If You Love Chinese">
+                                <div class="discount-badge">Flat 10% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Berco's - If You Love Chinese</h5>
+                                    <p class="card-text">Chinese, Thai, Asian, Desserts</p>
+                                    <p class="card-text">₹1,500 for two</p>
+                                    <p class="card-text">Omaxe Connaught Place, Beta 2, Greater Noida</p>
+                                    <p class="card-text distance">2.6 km</p>
+                                    <span class="rating-badge">4.4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/Baar.avif" class="card-img-top" alt="Bako Yaar">
+                                <div class="discount-badge">Flat 10% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bako Yaar</h5>
+                                    <p class="card-text">North Indian, Mughlai, Kebabs</p>
+                                    <p class="card-text">₹1,200 for two</p>
+                                    <p class="card-text">Omaxe Connaught Place, Beta 2, Greater Noida</p>
+                                    <p class="card-text distance">2.5 km</p>
+                                    <span class="rating-badge">3.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/Connexiouns.avif" class="card-img-top" alt="Sagar Ratna">
+                                <div class="discount-badge">Flat 25% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sagar Ratna</h5>
+                                    <p class="card-text">Chinese, North Indian, South Indian</p>
+                                    <p class="card-text">₹1,100 for two</p>
+                                    <p class="card-text">Omega 2, Greater Noida</p>
+                                    <p class="card-text distance">956 m</p>
+                                    <span class="rating-badge">3.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/Saran.avif" class="card-img-top"
+                                    alt="Berco's - If You Love Chinese">
+                                <div class="discount-badge">Flat 10% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Berco's - If You Love Chinese</h5>
+                                    <p class="card-text">Chinese, Thai, Asian, Desserts</p>
+                                    <p class="card-text">₹1,500 for two</p>
+                                    <p class="card-text">Omaxe Connaught Place, Beta 2, Greater Noida</p>
+                                    <p class="card-text distance">2.6 km</p>
+                                    <span class="rating-badge">4.4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/Matrix.avif" class="card-img-top" alt="Bako Yaar">
+                                <div class="discount-badge">Flat 10% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bako Yaar</h5>
+                                    <p class="card-text">North Indian, Mughlai, Kebabs</p>
+                                    <p class="card-text">₹1,200 for two</p>
+                                    <p class="card-text">Omaxe Connaught Place, Beta 2, Greater Noida</p>
+                                    <p class="card-text distance">2.5 km</p>
+                                    <span class="rating-badge">3.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card TCards">
+                                <img src="./Asserts/one8.avif" class="card-img-top" alt="Sagar Ratna">
+                                <div class="discount-badge">Flat 25% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sagar Ratna</h5>
+                                    <p class="card-text">Chinese, North Indian, South Indian</p>
+                                    <p class="card-text">₹1,100 for two</p>
+                                    <p class="card-text">Omega 2, Greater Noida</p>
+                                    <p class="card-text distance">956 m</p>
+                                    <span class="rating-badge">3.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/Cafe.avif" class="card-img-top"
+                                    alt="Berco's - If You Love Chinese">
+                                <div class="discount-badge">Flat 10% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Berco's - If You Love Chinese</h5>
+                                    <p class="card-text">Chinese, Thai, Asian, Desserts</p>
+                                    <p class="card-text">₹1,500 for two</p>
+                                    <p class="card-text">Omaxe Connaught Place, Beta 2, Greater Noida</p>
+                                    <p class="card-text distance">2.6 km</p>
+                                    <span class="rating-badge">4.4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./Asserts/CelaBar.avif" class="card-img-top" alt="Bako Yaar">
+                                <div class="discount-badge">Flat 10% OFF</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bako Yaar</h5>
+                                    <p class="card-text">North Indian, Mughlai, Kebabs</p>
+                                    <p class="card-text">₹1,200 for two</p>
+                                    <p class="card-text">Omaxe Connaught Place, Beta 2, Greater Noida</p>
+                                    <p class="card-text distance">2.5 km</p>
+                                    <span class="rating-badge">3.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DiningFooter -->
+    <section class="DiningFooter">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="./Asserts/Zomato_footer_logo.png" alt="Zomato Logo" class="mb-3">
+                    </div>
+                    <div class="col-md-2">
+                        <h6>About Zomato</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Work With Us</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Report Fraud</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Zomaverse</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Zomato</a></li>
+                            <li><a href="#">Blinkit</a></li>
+                            <li><a href="#">Feeding India</a></li>
+                            <li><a href="#">Hyperpure</a></li>
+                            <li><a href="#">Zomato Live</a></li>
+                            <li><a href="#">Zomaland</a></li>
+                            <li><a href="#">Weather Union</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>For Restaurants</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Partner With Us</a></li>
+                            <li><a href="#">Apps For You</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Learn More</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="LinkStore">
+                        <div class="col-md-3">
+                            <h6>Social Links</h6>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                            </div>
+                            <div class="mt-3 FooterStore">
+                                <a href="#"><img src="./Asserts/AppStore.webp" alt="App Store"></a>
+                                <a href="#"><img src="./Asserts/googleplay.webp" alt="Google Play"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                    Content Policies. All trademarks are properties of their respective owners. 2024 © Zomato™ Ltd. All
+                    rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

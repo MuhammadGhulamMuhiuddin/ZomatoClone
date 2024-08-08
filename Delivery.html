@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Asserts/Zomato_logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: auto;
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Section Header */
+        .Header {
+            /* border: 1px solid #000; */
+            width: 100%;
+            height: 250px;
+            background-color: #ffffff;
+        }
+
+        .NavLogo img {
+            display: flex;
+            max-width: 7%;
+            margin-top: 1.55rem;
+            margin-left: 25rem;
+        }
+
+        .NavInput {
+            /* border: 1px solid red; */
+            width: 40%;
+            margin-left: 34rem;
+            margin-top: -2rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 600px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .location-icon {
+            font-size: 18px;
+            margin-right: 8px;
+            color: #ff6f61;
+        }
+
+        .search-icon {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        .location-input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .dropdown-icon {
+            margin-left: 8px;
+            color: #777;
+        }
+
+        .divider {
+            width: 1px;
+            height: 30px;
+            background-color: #ddd;
+            margin: 0 15px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            flex: 2;
+        }
+
+        .search-input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .search-input::placeholder {
+            color: #aaa;
+        }
+
+        .NavButtons {
+            /* border: 1px solid red; */
+            display: flex;
+            width: 12%;
+            margin-top: -1.55rem;
+            margin-left: 85rem;
+        }
+
+        .NavButtons span {
+            margin: 0 1rem;
+            color: grey;
+        }
+
+        .NavButtons span:hover {
+            cursor: pointer;
+        }
+
+        .NavList {
+            /* border: 1px solid green; */
+            display: flex;
+            width: 24%;
+            margin-top: 2rem;
+            margin-left: 25rem;
+        }
+
+        .NavList span {
+
+            color: grey;
+            margin-right: 4rem;
+            font-size: small;
+        }
+
+        .NavList span:hover {
+            cursor: pointer;
+        }
+
+        .NavFrachise {
+            /* border: 1px solid blue; */
+            margin-top: 1rem;
+            display: flex;
+            margin-left: 25rem;
+            width: 50%;
+            gap: 3rem;
+        }
+
+        .NavFrachise1 {
+            /* border: 2px solid saddlebrown; */
+            width: 25%;
+            display: flex;
+        }
+
+        .NavFranchiseImg1 img {
+            max-width: 30%;
+        }
+
+        .NavFranchiseImg1 img:hover {
+            cursor: pointer;
+        }
+
+        .NavFranchiseImg1 h5 a {
+            display: inline-block !important;
+            color: grey !important;
+            text-decoration: none !important;
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+        .NavFranchiseImg1 h5 a:hover {
+            color: #F06371 !important;
+            cursor: pointer !important;
+
+        }
+
+        /* SectionCollection */
+        .Collections {
+            /* border: 2px solid black; */
+            height: auto;
+            width: 100%;
+            background-color: #f8f8f8;
+            overflow: hidden;
+
+        }
+
+        .Collection {
+            margin-left: 25rem;
+            padding-bottom: 2rem;
+        }
+
+        .ColcMainText {
+            margin-top: 2rem;
+        }
+
+        .ColcMainText h2 {
+            font-weight: 500;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        .food-menu {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 90%;
+        }
+
+        .food-item {
+            text-align: center;
+        }
+
+        .food-item img {
+            max-width: 100%;
+
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        .food-item img:hover {
+            cursor: pointer;
+        }
+
+        .food-item p {
+            margin-top: 10px;
+            font-size: 25px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .food-item p:hover {
+            cursor: pointer;
+        }
+
+        /* SectionBrands */
+        .brands {
+            /* border: 2px solid black; */
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .food-item small {
+            color: rgb(204, 202, 202);
+            margin-top: 18px;
+        }
+
+        .filters {
+            margin-left: 25rem;
+            margin-top: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .fit-btn {
+            border: 1px solid lightslategray;
+            padding: 10px 20px;
+            color: grey;
+            border-radius: 4px;
+        }
+
+        .fit-btn:hover {
+            cursor: pointer;
+        }
+
+        /* SectionTrending */
+        .restaurant-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .restaurant-cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .restaurant-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            padding: 15px;
+            text-align: left;
+            position: relative;
+        }
+
+        .restaurant-card img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .restaurant-card h3 {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .restaurant-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .time {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /*DeleiveryFooter  */
+
+        .DiningFooter{
+            /* border: 1px solid red; */
+            /* margin-top: 1rem; */
+            height: auto;
+            width: 100%;
+        }
+
+        .footer {
+            /* overflow: hidden; */
+            background-color: #F8F8F8;
+            padding: 40px 0;
+        }
+        .footer h6 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .footer a {
+            color: grey;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #666;
+        }
+        .LinkStore{
+            /* border: 1px solid black; */
+            display: inline-block;
+            /* width: 40%; */
+        }
+        .footer .social-links img {
+            width: 40px;
+            margin: 0 10px;
+        }
+        .footer .social-links a {
+            color: #000;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .FooterStore img{
+            max-width: 50%;
+            margin-bottom: 1rem;
+
+        }
+        .footer-bottom {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- SectionHeader -->
+    <Section class="Header">
+        <div class="Nav">
+            <div class="NavLogo">
+                <img src="./Asserts/NavLogo.avif" alt="Here is an NavLogo">
+            </div>
+            <div class="NavInput">
+                <div class="search-bar">
+                    <div class="location">
+                        <!-- <span class="location-icon">&#x1F4CD;</span> -->
+                        <span class="location-icon"><i class=" location-icon fa-solid fa-location-dot"></i></span>
+                        <input type="text" placeholder="Block B, Jaypee Greens, ..." class="location-input">
+                        <span class="dropdown-icon">&#x25BC;</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="search">
+                        <!-- <span class="search-icon">&#x1F50E;</span> -->
+                        <span class="search-icon"><i class="search-icon fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Search for restaurant, cuisine or a dish" class="search-input">
+                    </div>
+                </div>
+            </div>
+            <div class="NavButtons">
+                <Span>Login</Span>
+                <Span>Sign up</Span>
+            </div>
+            <div class="NavList">
+                <span>
+                    Home &#160; / &#160; India &#160; / &#160; Delhi NCR &#160; / &#160; Restaurants
+                </span>
+            </div>
+            <div class="NavFrachise">
+                <div class="NavFrachise1">
+                    <div class="NavFranchiseImg1">
+                        <img src="./Asserts/DiningOut.avif" alt="Here is an Franchise Image">
+                        <h5>
+                            <a href="./index.html">Dining</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="NavFrachise1">
+                    <div class="NavFranchiseImg1">
+                        <img src="./Asserts/Deliveryimg.webp" alt="Here is an Franchise Image">
+                        <h5>
+                            <a href="./Delivery.html">Delivery</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="NavFrachise1">
+                    <div class="NavFranchiseImg1">
+                        <img src="./Asserts/NightLife.webp" alt="Here is an Franchise Image">
+                        <h5>
+                            <a href="./NIghtlife.html">Nightlife</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+
+    <!-- SectionCollections -->
+    <Section class="Collections">
+        <div class="Collection">
+            <div class="ColcMainText">
+                <h2>Inspiration of your first order</h2>
+            </div>
+            <div class="food-menu">
+                <div class="food-item">
+                    <img src="./Asserts/pizza.avif" alt="Pizza">
+                    <p>Pizza</p>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/burger.avif" alt="Burger">
+                    <p>Burger</p>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/chicken.avif" alt="Chicken">
+                    <p>Chicken</p>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/biryanni.avif" alt="Biryani">
+                    <p>Biryani</p>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/thalli.avif" alt="Thali">
+                    <p>Thali</p>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/Rolls.avif" alt="Rolls">
+                    <p>Rolls</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        </div>
+    </Section>
+    <div class="container filters text-center">
+        <button type="button" class="btn btn-light fit-btn">Filters</button>
+        <button type="button" class="btn btn-light fit-btn">Pure Veg</button>
+        <button type="button" class="btn btn-light fit-btn">Cuisines</button>
+    </div>
+
+    <!-- SectionBrand -->
+    <Section class="brands">
+        <div class="Collection">
+            <div class="ColcMainText">
+                <h2>Top brand for you</h2>
+            </div>
+            <div class="food-menu">
+                <div class="food-item">
+                    <img src="./Asserts/Haldiram.avif" alt="Pizza">
+                    <p>Haldiram's</p>
+                    <small>40 min</small>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/mcdoland.avif" alt="Burger">
+                    <p>McDonald's</p>
+                    <small>44 min</small>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/domino.avif" alt="Chicken">
+                    <p>Domino's Pizza</p>
+                    <small>40 min</small>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/burgerking.avif" alt="Biryani">
+                    <p>Burger King</p>
+                    <small>41 min</small>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/subway.avif" alt="Thali">
+                    <p>Subway</p>
+                    <small>35 min</small>
+                </div>
+                <div class="food-item">
+                    <img src="./Asserts/kfc.avif" alt="Rolls">
+                    <p>KFC</p>
+                    <small>38 min</small>
+                </div>
+            </div>
+
+
+
+        </div>
+        </div>
+    </Section>
+    <!-- SectionDelivery -->
+    <section class="delivery">
+        <div class="dilvery">
+            <div class="restaurant-section">
+                <h2>Food Delivery Restaurants in</h2>
+                <div class="restaurant-cards">
+                    <div class="restaurant-card">
+                        <img src="./Asserts/PizzaCard.avif" alt="Domino's Pizza">
+                        <div class="discount-badge">Flat ₹100 OFF + Free Delivery</div>
+                        <h3>Domino's Pizza</h3>
+                        <p>Pizza, Beverages, Desserts</p>
+                        <p>₹200 for one</p>
+                        <p class="time">28 min</p>
+                        <div class="rating">4.3★</div>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="./Asserts/AlphaCakeCard.avif" alt="Alpha Cake Bakery">
+                        <h3>Alpha Cake Bakery</h3>
+                        <p>Bakery</p>
+                        <p>₹200 for one</p>
+                        <p class="time">28 min</p>
+                        <div class="rating">3.5★</div>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="./Asserts/PizzasiaCard.avif" alt="Pizzasia">
+                        <div class="discount-badge">50% OFF</div>
+                        <h3>Pizzasia</h3>
+                        <p>Pizza, Fast Food, Pasta, Snacks</p>
+                        <p>₹200 for one</p>
+                        <p class="time">29 min</p>
+                        <div class="rating">4.0★</div>
+                    </div>
+
+                </div>
+                <div class="restaurant-cards">
+                    <div class="restaurant-card">
+                        <img src="./Asserts/BiryaniCard.avif" alt="Domino's Pizza">
+                        <div class="discount-badge">Flat ₹100 OFF + Free Delivery</div>
+                        <h3>Domino's Pizza</h3>
+                        <p>Pizza, Beverages, Desserts</p>
+                        <p>₹200 for one</p>
+                        <p class="time">28 min</p>
+                        <div class="rating">4.3★</div>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="./Asserts/BiryaniBlueCard.avif" alt="Alpha Cake Bakery">
+                        <h3>Alpha Cake Bakery</h3>
+                        <p>Bakery</p>
+                        <p>₹200 for one</p>
+                        <p class="time">28 min</p>
+                        <div class="rating">3.5★</div>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="./Asserts/DesiMealsCard.avif" alt="Pizzasia">
+                        <div class="discount-badge">50% OFF</div>
+                        <h3>Pizzasia</h3>
+                        <p>Pizza, Fast Food, Pasta, Snacks</p>
+                        <p>₹200 for one</p>
+                        <p class="time">29 min</p>
+                        <div class="rating">4.0★</div>
+                    </div>
+
+                </div>
+                <div class="restaurant-cards">
+                    <div class="restaurant-card">
+                        <img src="./Asserts/PizzaCard.avif" alt="Domino's Pizza">
+                        <div class="discount-badge">Flat ₹100 OFF + Free Delivery</div>
+                        <h3>Domino's Pizza</h3>
+                        <p>Pizza, Beverages, Desserts</p>
+                        <p>₹200 for one</p>
+                        <p class="time">28 min</p>
+                        <div class="rating">4.3★</div>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="./Asserts/AlphaCakeCard.avif" alt="Alpha Cake Bakery">
+                        <h3>Alpha Cake Bakery</h3>
+                        <p>Bakery</p>
+                        <p>₹200 for one</p>
+                        <p class="time">28 min</p>
+                        <div class="rating">3.5★</div>
+                    </div>
+                    <div class="restaurant-card">
+                        <img src="./Asserts/PizzasiaCard.avif" alt="Pizzasia">
+                        <div class="discount-badge">50% OFF</div>
+                        <h3>Pizzasia</h3>
+                        <p>Pizza, Fast Food, Pasta, Snacks</p>
+                        <p>₹200 for one</p>
+                        <p class="time">29 min</p>
+                        <div class="rating">4.0★</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DiningFooter -->
+     <!-- DiningFooter -->
+     <section class="DiningFooter">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="./Asserts/Zomato_footer_logo.png" alt="Zomato Logo" class="mb-3">
+                    </div>
+                    <div class="col-md-2">
+                        <h6>About Zomato</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Work With Us</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Report Fraud</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Zomaverse</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Zomato</a></li>
+                            <li><a href="#">Blinkit</a></li>
+                            <li><a href="#">Feeding India</a></li>
+                            <li><a href="#">Hyperpure</a></li>
+                            <li><a href="#">Zomato Live</a></li>
+                            <li><a href="#">Zomaland</a></li>
+                            <li><a href="#">Weather Union</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>For Restaurants</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Partner With Us</a></li>
+                            <li><a href="#">Apps For You</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Learn More</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="LinkStore">
+                        <div class="col-md-3">
+                            <h6>Social Links</h6>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                            </div>
+                            <div class="mt-3 FooterStore">
+                                <a href="#"><img src="./Asserts/AppStore.webp" alt="App Store"></a>
+                                <a href="#"><img src="./Asserts/googleplay.webp" alt="Google Play"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                    Content Policies. All trademarks are properties of their respective owners. 2024 © Zomato™ Ltd. All
+                    rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+
+
+</body>
+
+</html>
